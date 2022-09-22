@@ -1,17 +1,17 @@
-service: paramiko-py38
+service: paramiko-py39
 
 provider:
   name: aws
   profile: jb
-  region: ${opt:region, 'eu-central-1'}
+  region: ${opt:region, 'eu-east-1'}
 
 layers:
   paramiko:
     path: build
-    name: paramiko-py38
+    name: paramiko-py39
     description: Provides Paramiko SSH library for Python
     compatibleRuntimes:
-      - python3.8
+      - python3.9
     allowedAccounts:
       - '*'
     retain: true
